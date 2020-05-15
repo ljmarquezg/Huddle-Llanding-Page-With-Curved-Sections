@@ -1,0 +1,532 @@
+/* ## Colors */
+/* ### Headings */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Poppins Bold"), local("Poppins-Bold"), url(../fonts/poppins.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* ### Body */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Open Sans Regular"), local("OpenSans-Regular"), url(../fonts/opensans.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local("Open Sans SemiBold"), local("OpenSans-SemiBold"), url(../fonts/opensans-medium.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Open Sans Bold"), local("OpenSans-Bold"), url(../fonts/opensans-bold.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.woff?pza2gj") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-facebook2:before {
+  content: "\ea91";
+}
+
+.icon-instagram:before {
+  content: "\ea92";
+}
+
+.icon-twitter:before {
+  content: "\ea96";
+}
+
+/*********** Components **********/
+body,
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  font-family: "Open Sans", Helvetica, Arial;
+  color: #00252e;
+  min-width: 350px;
+}
+
+picture,
+figure {
+  margin: 0;
+  width: 100%;
+  display: flex;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+
+nav {
+  background: white;
+  padding: 20px 10px;
+  align-items: center;
+  height: 30px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", Helvetica, Arial;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+p {
+  font-size: 14px;
+  line-height: 22px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+p.large {
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+button {
+  outline: none;
+  border: none;
+  border-radius: 32px;
+  padding: 8px 16px;
+  background-color: #ff52bf;
+  color: white;
+}
+
+button.outline {
+  background-color: white;
+  border: medium solid #ff52bf;
+  color: #ff52bf;
+  box-shadow: 0 0 5px #ff52bf;
+}
+
+button.large {
+  width: 200px;
+  height: 40p;
+  margin: 40px auto;
+  box-shadow: 0 2px 4px #ccc;
+  font-weight: bold;
+}
+
+footer {
+  background-color: #00252e;
+  color: white;
+}
+
+footer .logo img {
+  filter: invert(1) brightness(1000);
+}
+
+footer figure {
+  margin-bottom: 12px;
+  margin-top: 12px;
+}
+
+footer .icon {
+  width: 18px;
+  height: 18px;
+}
+
+footer p {
+  font-weight: bold;
+}
+
+footer p.inline {
+  margin: 0;
+}
+
+footer .content {
+  margin-bottom: 50px;
+  margin-top: 50px;
+  display: block;
+}
+
+form {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+
+input {
+  height: 48px;
+  background: white;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+  outline: none;
+  border: none;
+  margin: 8px 0;
+  width: 100%;
+}
+
+/* Mobile: 375px */
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col {
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  padding-right: 12px;
+  padding-left: 12px;
+  order: 0;
+}
+
+.col.invert-order {
+  order: 1;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-self-center {
+  align-items: center;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.m-auto {
+  margin: 0 auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.pr-sm {
+  padding-right: 8px;
+}
+
+.pl-sm {
+  padding-left: 8px;
+}
+
+.align-self-center {
+  align-self: center;
+}
+
+/********* Elements *********/
+.logo {
+  width: 96px;
+  height: 16px;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  object-fit: contain;
+}
+
+.banner {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  height: 500px;
+}
+
+.banner p {
+  margin-bottom: 10px;
+  max-width: 540px;
+}
+
+.banner-img {
+  margin: 25px auto;
+  width: 90%;
+}
+
+.icon {
+  margin: 0 16px 0 0;
+}
+
+.icon.sm {
+  margin: 8px 0;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+}
+
+.text-large {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  font-size: 48px;
+  line-height: 36px;
+  font-weight: bold;
+}
+
+.text-light {
+  color: rgba(0, 37, 46, 0.5);
+  font-size: 12px;
+}
+
+.highlights {
+  margin: 50px auto;
+  max-width: 150px;
+  width: 100%;
+}
+
+.highlights p {
+  text-align: center;
+}
+
+.service {
+  display: flex;
+  align-items: space-between;
+  flex-wrap: wrap;
+}
+
+.service:nth-of-type(even) {
+  background-color: white;
+  padding: 94px 36px 120px;
+}
+
+.service:nth-of-type(odd) {
+  background-color: #f5faff;
+  padding: 24px 36px;
+}
+
+.service:nth-of-type(3) {
+  padding: 0 36px 64px;
+}
+
+.service picture {
+  margin: 0 auto 84px auto;
+  max-width: 260px;
+  max-height: 210px;
+}
+
+.service h3 {
+  font-size: 18px;
+}
+
+.service p {
+  font-size: 12px;
+}
+
+.service h3,
+.service p {
+  text-align: center;
+}
+
+.service-illustration {
+  margin: 48px 0;
+}
+
+.service-description,
+.service-illustration {
+  align-self: center;
+}
+
+.info {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.btn-submit {
+  border-radius: 8px;
+  width: 160px;
+  height: 48px;
+  margin: 16px 0 8px auto;
+  display: block;
+}
+
+[class^="icon-"] {
+  font-size: 24px;
+}
+
+[class^="icon-"] + [class^="icon-"] {
+  margin-left: 16px;
+}
+
+/* - Desktop: 1440px*/
+@media (min-width: 768px) {
+  .container {
+    max-width: 1440px;
+  }
+  .col {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 50%;
+  }
+  .col.invert-order {
+    order: 0;
+  }
+  .service:nth-of-type(odd) .service-description {
+    order: 0;
+  }
+  .service:nth-of-type(odd) .service-illustration {
+    order: 1;
+  }
+  h2 {
+    font-size: 36px;
+  }
+  h3 {
+    font-size: 32px;
+  }
+  nav {
+    padding: 20px 10px;
+    align-items: center;
+    height: 175px;
+  }
+  .logo {
+    height: 45px;
+    max-width: 240px;
+    width: 40%;
+  }
+  button.outline {
+    height: 45px;
+    width: 140px;
+    font-size: 16px;
+  }
+  button.large {
+    width: 400px;
+    height: 80px;
+    margin: 40px auto;
+    box-shadow: 0 2px 8px #ccc;
+    border-radius: 50px;
+    font-size: 18px;
+  }
+  .banner h2 {
+    margin-bottom: 0;
+  }
+  .banner p {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .banner-img {
+    margin: 0 auto 64px;
+  }
+  .text-large {
+    font-size: 72px;
+  }
+  .text-light {
+    font-size: 18px;
+  }
+  .service h3,
+.service p {
+    max-width: 492px;
+    text-align: left;
+  }
+  .service p {
+    font-size: 15px;
+  }
+  .service h3 {
+    font-size: 32px;
+  }
+  .service:nth-of-type(even) h3,
+.service:nth-of-type(even) p {
+    margin-left: auto;
+  }
+  form {
+    flex-direction: row;
+  }
+  .highlights {
+    margin: 50px auto;
+    max-width: 208px;
+    width: 100%;
+  }
+  .text-large {
+    line-height: 74px;
+  }
+  footer p {
+    max-width: 300px;
+    font-size: 12px;
+  }
+  footer .content {
+    margin-bottom: 32px;
+    margin-top: 32px;
+  }
+  .btn-submit {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  input {
+    max-width: 320px;
+    margin-right: 42px;
+  }
+  .pull-right {
+    margin-left: auto;
+    max-width: 520px;
+  }
+}
